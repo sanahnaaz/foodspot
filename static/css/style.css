@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: normal;
+    text-decoration: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Gordita Regular";
+}
+ol,
+ul {
+    list-style: none;
+}
+del {
+    text-decoration: line-through;
+}
+body {
+    font-size: 17px;
+    color: #1c2c40;
+    overflow-x: hidden;
+    min-width: 320px;
+    font-weight: 400;
+}
+input,
+textarea,
+select {
+    font-weight: 400;
+}
+
+a {
+    color: #1c2c40;
+}
+a:hover,
+.submit:hover {
+    filter: alpha(opacity = 85);
+    -moz-opacity: 0.85;
+    -khtml-opacity: 0.85;
+    opacity: 0.85;
+}
+.thumb {
+    display: block;
+}
+.thumb img {
+    display: block;
+    width: 100%;
+}
+p {
+    line-height: 1.6em;
+    font-size: 16px;
+    font-weight: 400;
+}
+.hidden {
+    display: none;
+}
+br.clear {
+    clear: both;
+    line-height: 0;
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.left { 
+    display: flex;
+    width: 10%;
+
+}
+
+header div.left img { 
+    width: 100%;
+    display: block;
+}
+
+header div.right { 
+    display: flex;
+}
+
+header div.right ul { 
+    display: flex;
+    justify-content: space-between;
+}
+
+header div.right ul li { 
+    margin-right: 20px;
+}
+
+header div.right ul li a { 
+
+}
+section#spotlight { 
+    display: flex;
+   
+}
+
+section#spotlight div.left { 
+    width: 80%;
+}
+
+section#spotlight div.left div.order { 
+
+}
+
+section#spotlight div.left div.order ul { 
+   display: flex;
+   justify-content: space-between;
+   margin: 20px;
+}
+
+section#spotlight div.left div.order ul li { 
+    margin-right: 30px;
+    flex-wrap: wrap;
+    
+    
+}
+
+section#spotlight div.left div.order ul li div.food_image{ 
+    width: 70%;
+}
+section#spotlight div.left div.order ul li div{
+    
+}
+section#spotlight div.left div.order ul li div img { 
+    width: 100%;
+    display: block
+}
+section#spotlight div.left div.order ul li div.food_details { 
+    width: 30%;
+}
+section#spotlight div.left div.order ul li div.items{
+    margin-top: 30px;
+}
+section#spotlight div.left div.order ul li div.items h5 { 
+
+}
+
+section#spotlight div.left div.order ul li div.items h5 a { 
+    font-size: px;
+
+}
+
+section#spotlight div.right { 
+    width: 20%;
+}

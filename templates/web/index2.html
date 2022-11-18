@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '../../static/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <section class="wrapper">
+        <header>
+        
+            <div class="left">
+                <img src="{% static '../../static/images/logo.png' %}" alt="image">
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="{% url 'posts:order' %}">order</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'users:logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'users:login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </header>
+       
+    </section>
+    <section>
+        <div>  
+            
+            {% if orders %}
+                <p>Date : {{orders.date1}} </p>
+                <p>{{orders.breakfast1}}</p>
+                <p>{{orders.lunch1}}</p>
+                <p>{{orders.snacks1}}</p>
+                <p>{{orders.supper1}}</p>
+                <p>Date : {{orders.date2}} </p>
+                <p>{{orders.breakfast2}}</p>
+                <p>{{orders.lunch2}}</p>
+                <p>{{orders.snacks2}}</p>
+                <p>{{orders.supper2}}</p>
+                <p>Date : {{orders.date3}} </p>
+                <p>{{orders.breakfast3}}</p>
+                <p>{{orders.lunch3}}</p>
+                <p>{{orders.snacks3}}</p>
+                <p>{{orders.supper3}}</p>
+                <p>Date : {{orders.date4}} </p>
+                <p>{{orders.breakfast4}}</p>
+                <p>{{orders.lunch4}}</p>
+                <p>{{orders.snacks4}}</p>
+                <p>{{orders.supper4}}</p>
+                <p>Date : {{orders.date5}} </p>
+                <p>{{orders.breakfast5}}</p>
+                <p>{{orders.lunch5}}</p>
+                <p>{{orders.snacks5}}</p>
+                <p>{{orders.supper5}}</p>
+                <p>Date : {{orders.date6}} </p>
+                <p>{{orders.breakfast6}}</p>
+                <p>{{orders.lunch6}}</p>
+                <p>{{orders.snacks6}}</p>
+                <p>{{orders.supper6}}</p>
+                <p>Date : {{orders.date7}} </p>
+                <p>{{orders.breakfast7}}</p>
+                <p>{{orders.lunch7}}</p>
+                <p>{{orders.snacks7}}</p>
+                <p>{{orders.supper7}}</p>
+            {% endif %}
+                         
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '../../static/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <section class="wrapper">
+        <header>
+        
+            <div class="left">
+                <img src="{% static '../../static/images/logo.png' %}" alt="image">
+            </div>
+            <div class="right">
+                <ul>
+                    <!-- <li>
+                        <a href="">order</a>
+                    </li> -->
+                    {% if request.user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'users:logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'users:login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a href="{% url 'users:login' %}">signup</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'users:create_student' %}">Create Students</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        
+        <section>
+            <h4>Students List</h4>
+            <ul>
+                {% for student in students %}
+                <li>
+                    <p>{{forloop.counter}}</p>
+                    <p>Username : {{student.user}}</p>
+                    <p>Password : {{student.password}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </section>
+</body>
+</html>
